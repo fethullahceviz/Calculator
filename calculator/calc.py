@@ -1,4 +1,3 @@
-from turtle import Screen
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
@@ -114,7 +113,6 @@ class Ui_MainWindow(object):
         font.setPointSize(26)
         self.sixButton.setFont(font)
         self.sixButton.setObjectName("sixButton")
-
         self.equalButton = QtWidgets.QPushButton(self.centralwidget,clicked=lambda:self.math_it())
         self.equalButton.setGeometry(QtCore.QRect(280, 470, 75, 75))
         font = QtGui.QFont()
@@ -122,8 +120,6 @@ class Ui_MainWindow(object):
         self.equalButton.setFont(font)
         self.equalButton.setObjectName("equalButton")
         self.equalButton.setStyleSheet(u"background-color: rgb(255, 121, 121);")
-
-
         self.zeroButton = QtWidgets.QPushButton(self.centralwidget,clicked=lambda:self.press_it("0"))
         self.zeroButton.setGeometry(QtCore.QRect(100, 470, 75, 75))
         font = QtGui.QFont()
@@ -153,7 +149,6 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.menubar.addAction(self.menuFile.menuAction())
-
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
@@ -183,6 +178,7 @@ class Ui_MainWindow(object):
             pass
         else:
             self.label.setText(f"{screen}.")
+            
     def press_it(self,pressed):
         if pressed == "C":
             self.label.setText("0")
