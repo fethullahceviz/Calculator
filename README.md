@@ -1,1 +1,1 @@
-# Calculator wiht PyQt5
+# Calculator with PyQt5
